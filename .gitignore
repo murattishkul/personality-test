@@ -1,0 +1,61 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+personality-client/node_modules
+personality-client/.pnp
+.pnp.js
+
+# testing
+personality-client/coverage
+
+# next.js
+personality-client/.next/
+personality-client/out/
+
+# production
+personality-client/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+personality-client/.env.local
+personality-client/.env.development.local
+personality-client/.env.test.local
+personality-client/.env.production.local
+
+# vercel
+personality-client/.vercel
+
+# compiled output
+personality-server/dist
+personality-server/node_modules
+
+# Logs
+personality-server/logs
+*.log
+# Tests
+personality-server/coverage
+personality-server/.nyc_output
+
+# IDEs and editors
+personality-server/.idea
+personality-server/.project
+personality-server/.classpath
+personality-server/.c9/
+*.launch
+personality-server/.settings/
+*.sublime-workspace
+.idea
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

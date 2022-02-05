@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <main
+      class="main"
+    >
+      <p
+        class="chakra-text css-zjslrd"
+      >
+        Test: Are you an introvert or an extrovert?
+      </p>
+      <p
+        class="chakra-text css-189z7rm"
+      >
+        So do you consider yourself more of an introvert or an extrovert? Take this test, put together with input from psychoanalyst Sandrine Dury, and find out
+      </p>
+      <button
+        class="chakra-button css-5c2176"
+        type="button"
+      >
+        Start personality test
+      </button>
+    </main>
+  </div>
+</div>
+`;
