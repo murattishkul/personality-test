@@ -28,9 +28,9 @@ const PersonalityTest = ({testBank}) => {
     setQuestionId(questionId-1)
   }
 
-  const redirect = () => {
-    const pointsSum = points.reduce((a,b) => a+b, 0);
-    router.push({
+  const redirect = async () => {
+    const pointsSum = points.reduce((a,b) => a+b);
+    await router.push({
       pathname: '/result',
       query: { points: pointsSum }
     });
@@ -41,7 +41,14 @@ const PersonalityTest = ({testBank}) => {
       <Progress hasStripe colorScheme={'twitter'} value={((questionId+1)*100)/testBank.length} width={800} marginBottom={50}/>
 
       <div className={'backButton'}>
-        <Button colorScheme='536371' variant='link' isDisabled={questionId===0} onClick={handleBackClick} className={"backButton"} leftIcon={<Icon as={ArrowBackIcon} />}>
+        <Button
+          colorScheme='536371'
+          variant='link'
+          isDisabled={questionId===0}
+          onClick={handleBackClick}
+          className={"backButton"}
+          leftIcon={<Icon as={ArrowBackIcon}
+          aria-label={'back'}/>}>
           Back
         </Button>
       </div>
@@ -59,7 +66,7 @@ const PersonalityTest = ({testBank}) => {
       <ButtonGroup>
         { questionId === testBank.length - 1 ?
             <Button colorScheme='twitter' isDisabled={value===-1} onClick={redirect}>Get a result</Button> :
-            <Button colorScheme='twitter' isDisabled={value===-1} onClick={handleNextClick}>Next</Button>
+            <Button colorScheme='twitter' isDisabled={value===-1} onClick={handleNextClick} aria-label={'next'}>Next</Button>
         }
       </ButtonGroup>
 

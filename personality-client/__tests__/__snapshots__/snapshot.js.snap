@@ -19,6 +19,7 @@ exports[`renders homepage unchanged 1`] = `
         So do you consider yourself more of an introvert or an extrovert? Take this test, put together with input from psychoanalyst Sandrine Dury, and find out
       </p>
       <button
+        aria-label="start"
         class="chakra-button css-5c2176"
         type="button"
       >
